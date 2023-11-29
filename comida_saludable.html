@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos.css">
+    <title>Cosmo School</title>
+    <script>
+        function obtenerRecomendaciones() {
+            // Obtener el valor seleccionado del menú desplegable
+            var opcionSeleccionada = document.getElementById("vegetariana").value;
+
+            // Elemento donde se mostrarán las recomendaciones
+            var recomendacionesContainer = document.getElementById("recomendaciones-vegetarianas");
+
+            // Limpiar contenido anterior
+            recomendacionesContainer.innerHTML = "";
+
+            // Mostrar recomendaciones según la elección
+            if (opcionSeleccionada === "si") {
+                recomendacionesContainer.innerHTML = "<p>¡Excelente elección! Aquí tienes algunas recomendaciones para una dieta vegetariana equilibrada:</p>" +
+                    "<ul>" +
+                    "<li>Consume una variedad de frutas y verduras frescas.</li>" +
+                    "<li>Incorpora proteínas vegetales como legumbres, tofu y frutos secos.</li>" +
+                    "<li>Asegúrate de obtener suficientes fuentes de calcio, como productos lácteos alternativos.</li>" +
+                    "<li>Consulta a un nutricionista para planificar comidas balanceadas.</li>" +
+                    "</ul>";
+            } else if (opcionSeleccionada === "no") {
+                recomendacionesContainer.innerHTML = "<p>Entendemos tu elección. Si en algún momento consideras probar una dieta vegetariana, estamos aquí para ayudarte con recomendaciones saludables y deliciosas.</p>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Cosmo School</h1>
+    </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="alimentacion_consciente.html">Quiénes Somos</a>
+        <a href="#comida-saludable">Comida Saludable</a>
+        <a href="menu.html">Menú</a>
+        <a href="CONTACTO.HTML">Contacto</a>
+    </nav>
+
+    <section id="comida-saludable">
+        <h2>Comida Saludable por Cosmo School</h2>
+        <p>En Cosmo School, creemos que la alimentación es fundamental para el bienestar integral. Nuestra cocina está dedicada a ofrecer opciones saludables y deliciosas que nutran tu cuerpo y mente.</p>
+
+        <h3>Importancia de Comer Comida Saludable</h3>
+        <p>Una alimentación equilibrada es esencial para mantener una buena salud. Los alimentos preparados por Cosmo School están diseñados cuidadosamente para proporcionar los nutrientes necesarios para tu desarrollo físico y mental.</p>
+
+        <h3>Mantener una Dieta y Ejercicio Equilibrados</h3>
+        <p>Además de una buena alimentación, es crucial incorporar ejercicio regular en tu rutina diaria. Cosmo School promueve un enfoque holístico que incluye asesoramiento sobre dieta y ejercicio para mantener un estilo de vida saludable.</p>
+
+        <h3>Opción para Personas Vegetarianas</h3>
+        <p>En Cosmo School reconocemos y respetamos las diversas elecciones dietéticas. Si eres vegetariano, proporcionamos recomendaciones personalizadas para asegurarnos de que recibas los nutrientes necesarios para mantener tu salud en óptimas condiciones. Por favor, selecciona tu preferencia:</p>
+
+        <form>
+            <label for="vegetariana">¿Eres vegetariano?</label>
+            <select id="vegetariana" name="vegetariana">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+            <button type="button" onclick="obtenerRecomendaciones()">Obtener Recomendaciones</button>
+        </form>
+
+        <div id="recomendaciones-vegetarianas">
+            <!-- Aquí se mostrarán las recomendaciones para personas vegetarianas -->
+<div id="recomendaciones-vegetarianas">
+    <h3>Recomendaciones para Personas Vegetarianas</h3>
+    <p>¡Gracias por seleccionar la opción vegetariana! A continuación, te proporcionamos algunas recomendaciones para mantener una dieta equilibrada:</p>
+
+    <ul>
+        <li><strong>Variedad de Frutas y Verduras:</strong> Asegúrate de incluir una amplia variedad de frutas y verduras en tu dieta diaria.</li>
+        <li><strong>Fuentes de Proteínas Vegetarianas:</strong> Incorpora fuentes de proteínas vegetales como legumbres, tofu, quinoa y frutos secos.</li>
+        <li><strong>Granos Integrales:</strong> Opta por granos enteros como arroz integral, quinoa, avena, y pan integral.</li>
+        <li><strong>Suplementos Nutricionales:</strong> Considera tomar suplementos de vitaminas B12 y D, que pueden ser escasos en una dieta vegetariana.</li>
+        <li><strong>Ejercicio Regular:</strong> Combina una dieta saludable con ejercicio regular para mantener tu bienestar general.</li>
+    </ul>
+</div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados 2023</p>
+        <p>Contáctanos: hi@globant.com</p>
+        <!-- Agregar un gif rotando -->
+        <img src="nombre_del_gif.gif" alt="GIF Rotando">
+    </footer>
+</body>
+</html>

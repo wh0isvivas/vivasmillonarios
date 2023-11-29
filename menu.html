@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilos.css">
+    <title>Cosmo School - Menú Saludable</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Cosmo School</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="alimentacion_consciente.html">Quiénes Somos</a>
+            <a href="comida_saludable.html">Comida Saludable</a>
+            <a href="menu.html">Menú</a>
+            <a href="CONTACTO.HTML">Contacto</a>
+        </nav>
+    </header>
+    
+    <!-- Agrega el botón para mostrar el menú -->
+    <button onclick="mostrarMenu()">Mostrar Menú</button>
+
+    <!-- Sección del menú -->
+    <section id="menu" style="display: none;">
+        <h2>Menú Semanal</h2>
+
+        <!-- Agrega un botón para cada día de la semana -->
+        <div id="dias-semana">
+            <button onclick="mostrarDia('lunes')">Lunes 27</button>
+            <button onclick="mostrarDia('martes')">Martes 28</button>
+            <button onclick="mostrarDia('miercoles')">Miércoles 29</button>
+            <button onclick="mostrarDia('jueves')">Jueves 30</button>
+            <button onclick="mostrarDia('viernes')">Viernes 1</button>
+        </div>
+
+        <!-- Contenedor para mostrar las opciones de comida -->
+        <div id="opciones-comida">
+            <!-- La información del menú se actualizará dinámicamente aquí -->
+        </div>
+
+        <!-- Sección para sugerencias de comida -->
+        <h2>Sugerencias de Comida</h2>
+        <form>
+            <label for="tipo-comida">Tipo de Comida:</label>
+            <select id="tipo-comida" name="tipo-comida">
+                <option value="desayuno">Desayuno</option>
+                <option value="almuerzo">Almuerzo</option>
+                <option value="bebida">Bebida</option>
+            </select>
+            <button type="button" onclick="sugerirComida()">Sugerir Comida</button>
+        </form>
+        <p id="sugerencia-comida"></p>
+    </section>
+
+    <footer>
+        <p>Todos los derechos reservados 2023</p>
+        <p>Contáctanos: hi@globant.com</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Agrega un archivo JavaScript para la lógica -->
+</body>
+</html>

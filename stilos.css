@@ -1,0 +1,181 @@
+/* Estilos generales */
+body {
+    background-color: #fce4ec; /* Rosa pastel */
+    color: #444;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f48fb1; /* Rosa más oscuro */
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #f06292; /* Rosa más claro */
+}
+
+section {
+    padding: 50px;
+    text-align: justify; /* Alineación justificada del texto */
+}
+
+#cosmo-images {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden; /* Ocultar imágenes que se salen del contenedor */
+}
+
+.image-rotation {
+    display: flex;
+    flex-wrap: wrap; /* Hacer que las imágenes se envuelvan si no caben en una línea */
+    gap: 20px; /* Espaciado entre las imágenes */
+    animation: rotateImages 15s infinite linear; /* Rotar cada imagen durante 15 segundos de forma infinita */
+}
+
+.image-rotation img {
+    width: calc(33.33% - 20px); /* Calcular el ancho de cada imagen con espacio entre ellas */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#cosmida-title {
+    color: #f06292; /* Rosa más claro */
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #fff; /* Blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+@keyframes rotateImages {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+#image-slider {
+    display: flex;
+    overflow: hidden;
+    animation: slide 400s linear infinite;
+}
+
+#image-slider img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Estilos adicionales para la página de alimentación consciente */
+#alimentacion-consciente {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+#alimentacion-consciente h2 {
+    color: #f06292; /* Rosa más claro */
+}
+
+#alimentacion-consciente p {
+    color: #666;
+}
+
+#alimentacion-consciente ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#alimentacion-consciente li {
+    margin-bottom: 10px;
+}
+nav {
+    background-color: rgba(244, 143, 177, 0.8); /* Fondo rosa semi-transparente */
+    padding: 10px; /* Ajusta el espacio interno del nav */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Añade posición relativa para los elementos hijos absolutos */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #f06292; /* Rosa más claro */
+}
+
+/* Agrega un fondo adicional para mejorar la visibilidad */
+nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3); /* Fondo blanco semi-transparente */
+    z-index: -1; /* Coloca el fondo detrás del contenido del nav */
+}

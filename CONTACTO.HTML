@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estios.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=inicializarMapa" defer></script>
+    <script src="scrip.js" defer></script>
+    <title>Cosmo School - Página de Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Cosmo School</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="alimentacion_consciente.html">Quiénes Somos</a>
+            <a href="comida_saludable.html">Comida Saludable</a>
+            <a href="menu.html">Menú</a>
+            <a href="CONTACTO.HTML">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+
+        <!-- Mapa de Google Maps -->
+    
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.5751628808!2d-75.5646943!3d6.2447741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429fc19a253cd%3A0x4566d059b908362c!2sCosmo%20Schools%20Sede%20Centro!5e0!3m2!1ses-419!2sco!4v1701220836919!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- Información de Contacto -->
+        <div id="info-contacto">
+            <p>Dirección: Torres de Bombona, Medellín, Colombia</p>
+            <p>Teléfono: +57 123 456 789</p>
+            <p>Correo Electrónico: hi@globant.com</p>
+        </div>
+
+        <!-- Formulario de Sugerencias/Contacto -->
+        <form id="formulario-contacto" onsubmit="enviarFormulario(event)">
+            <label for="nombreCompleto">Nombre Completo:</label>
+            <input type="text" id="nombreCompleto" name="nombreCompleto" required>
+
+            <label for="cedula">Cédula o Tarjeta de Identidad:</label>
+            <input type="text" id="cedula" name="cedula" required>
+
+            <label for="gmail">Correo Electrónico (Gmail):</label>
+            <input type="email" id="gmail" name="gmail" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="motivoContacto">Motivo del Contacto:</label>
+            <textarea id="motivoContacto" name="motivoContacto" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Advertencia de completar todo el formulario -->
+        <div id="advertencia" style="display: none;">Por favor, completa todos los campos.</div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>Todos los derechos reservados 2023</p>
+        <p>Contáctanos: hi@globant.com</p>
+    </footer>
+
+    <script>
+        // Tu código JavaScript aquí
+        function inicializarMapa() {
+            // Código para inicializar el mapa
+        }
+
+        function enviarFormulario(event) {
+            // Código para enviar el formulario
+        }
+    </script>
+</body>
+</html>
